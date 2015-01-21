@@ -64,7 +64,7 @@ final class Tradesman
         }
 
         self::$attempts++;
-        if (self::$attempts > 1) {
+        if (self::$attempts > 3) {
             throw new \Exception("Maximum 3 attempts!");
         }
 

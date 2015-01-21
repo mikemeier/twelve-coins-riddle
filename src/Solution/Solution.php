@@ -15,10 +15,11 @@ use Riddle\Libra;
 class Solution
 {
     /**
-     * @return array (index, intentation)
+     * @param Libra $libra
+     * @return array
      * @see Riddle\Libra for index and intention
      */
-    public function getSolution()
+    public function getSolution(Libra $libra)
     {
         // Coin with index 0 is heavier
         return array(0, Libra::COIN_HEAVY);
