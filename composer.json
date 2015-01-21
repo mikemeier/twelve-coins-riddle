@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Riddle\\": "src/Riddle/",
+            "Solution\\": "src/Solution/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "~4.4"
+    }
+}
