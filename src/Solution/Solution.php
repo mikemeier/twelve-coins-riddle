@@ -58,5 +58,4 @@ class Solution
             'lrr' => [11, Libra::COIN_LIGHT]
         ][$idx];
     }
-
 }

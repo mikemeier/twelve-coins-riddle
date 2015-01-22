@@ -34,16 +34,6 @@ class LibraTest extends \PHPUnit_Framework_TestCase
         new Libra(10, 'foo');
     }
 
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage Running out of libras
-     */
-    public function testConstructInstances()
-    {
-        new Libra(1, Libra::COIN_HEAVY);
-        new Libra(1, Libra::COIN_HEAVY);
-    }
-
     public function testThreeAttempts()
     {
         $libra = new Libra(0, Libra::COIN_HEAVY);
