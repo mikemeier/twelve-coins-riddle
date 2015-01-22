@@ -31,12 +31,7 @@ final class Libra
     /**
      * @var int
      */
-    private static $instances = 0;
-
-    /**
-     * @var int
-     */
-    private static $attempts = 0;
+    private $attempts = 0;
 
     /**
      * @var int
@@ -65,11 +60,6 @@ final class Libra
 
         $this->index = $index;
         $this->intention = $intention;
-
-        self::$instances++;
-        if (self::$instances > 1) {
-            throw new \RuntimeException("Running out of libras");
-        }
     }
 
     /**
@@ -80,8 +70,8 @@ final class Libra
      */
     final public function weigh(array $left = array(), array $right = array())
     {
-        self::$attempts++;
-        if (self::$attempts > 3) {
+        $this->attempts++;
+        if ($this->attempts > 3) {
             throw new \Exception("Only 3 attempts!");
         }
 

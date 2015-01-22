@@ -15,7 +15,7 @@ final class Tradesman
     /**
      * @var int
      */
-    private static $attempts = 0;
+    private $attempts = 0;
     /**
      * @var Libra
      */
@@ -63,8 +63,8 @@ final class Tradesman
             throw new \Exception("Invalid intentation - use Libra::COIN_HEAVY or Libra::COIN_LIGHT");
         }
 
-        self::$attempts++;
-        if (self::$attempts > 3) {
+        $this->attempts++;
+        if ($this->attempts > 3) {
             throw new \Exception("Maximum 3 attempts!");
         }
 

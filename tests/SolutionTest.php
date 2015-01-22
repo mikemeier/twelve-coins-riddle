@@ -17,11 +17,14 @@ class SolutionTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetSolution()
     {
-        $solution = new Solution();
-        $tradesman = new Tradesman();
+        for ($i = 0; $i < 10000; $i++) {
+            $solution = new Solution();
+            $tradesman = new Tradesman();
 
-        list($index, $intention) = $solution->getSolution($tradesman->getLibra());
+            list($index, $intention) = $solution->getSolution($tradesman->getLibra());
 
-        $this->assertTrue($tradesman->resolve($index, $intention), 'Wrong answer! - Please try again :-)');
+            $this->assertTrue($tradesman->resolve($index, $intention),
+                'Wrong answer! - Please try again :-)');
+        }
     }
 }

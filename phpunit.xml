@@ -11,12 +11,14 @@
         syntaxCheck="false"
         bootstrap="./vendor/autoload.php">
     <testsuites>
+        <!--
         <testsuite name="Tradesman">
             <file>./tests/TradesmanTest.php</file>
         </testsuite>
         <testsuite name="Libra">
             <file>./tests/LibraTest.php</file>
         </testsuite>
+        -->
         <testsuite name="Solution">
             <file>./tests/SolutionTest.php</file>
         </testsuite>
